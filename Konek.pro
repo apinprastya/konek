@@ -31,13 +31,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
 
+target.path = /opt/konek
+INSTALLS += target
 
 SOURCES += \
         main.cpp \
-        maindialog.cpp
+        maindialog.cpp \
+    wificonnectdialog.cpp
 
 HEADERS += \
-        maindialog.h
+        maindialog.h \
+    wificonnectdialog.h
 
 FORMS += \
-        maindialog.ui
+        maindialog.ui \
+    wificonnectdialog.ui

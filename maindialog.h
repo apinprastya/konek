@@ -24,6 +24,7 @@ private:
     NetworkTechnology *mCurrentNetworkTech = nullptr;
     NetworkService *mCurrentNetworkService = nullptr;
     QList<NetworkTechnology*> mNetworkTechs;
+    QList<NetworkService*> mNetworkWifiServices;
     QString mLastSelectedTech;
     QString mSelectedTechType;
 
@@ -35,6 +36,11 @@ private slots:
     void servicesChanged();
     void techPoweredChange(bool /*value*/);
     void ipv4Changed(const QVariantMap &);
+    void scanFinished();
+    void onWifiSelected();
+    void scanClicked();
+    void connectClicked();
+    void disconnectClicked();
 };
 
 #endif // MAINDIALOG_H
